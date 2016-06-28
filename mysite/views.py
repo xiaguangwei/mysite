@@ -36,7 +36,6 @@ def minute_head2(requst ,offset):
     dt = datetime.datetime.now() + datetime.timedelta(minutes=offset)
     t = Template("<html><body> in {{ minute }} minute(s), it will be {{ time }}.</body></html>")
     html = t.render(Context({'minute': offset,'time': dt}))
-    da = requst
     return HttpResponse(html)
 
 
