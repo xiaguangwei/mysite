@@ -28,14 +28,6 @@ def minute_head(requst ,offset):
     t = Template("<html><body> in {{ minute }} minute(s), it will be {{ time }}.</body></html>")
     html = t.render(Context({'minute': offset,'time': dt}))
     return HttpResponse(html)
-def minute_head2(requst ,offset):
-    try:
-        offset=int(offset)
-    except:
-        raise Http404()
-    dt = datetime.datetime.now() + datetime.timedelta(minutes=offset)
-    t = Template("<html><body> in {{ minute }} minute(s), it will be {{ time }}.</body></html>")
-    html = t.render(Context({'minute': offset,'time': dt}))
-    return HttpResponse(html)
+
 
 
