@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" />
+
+</head>
+<body>
+<div class="container">
+    <ul>
+        {% for catalog in catalogs %}
+        <li>
+            {{ catalog }}
+        </li>
+        {% endfor %}
+
+    </ul>
+    <button type="button" class = "btn btn-danger">333</button>
+</div>
+
+
+</body>
+</html>
